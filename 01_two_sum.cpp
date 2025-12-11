@@ -1,6 +1,7 @@
 // 1. Brute Force (Nested Loops)
 // Check every pair with two nested loops.
 #include<bits/stdc++.h>
+using namespace std;
 pair<int,int> twoSumBruteForce(const vector<int>& nums, int target) {
     int n = nums.size();
 for(int i=0; i<n; i++)
