@@ -28,6 +28,7 @@ class Solution {
         arr[++j]=arr[i];
         }
     }
+    // resize the array to remove the extra elements
     arr.erase(arr.begin()+j+1,arr.end());
     return arr;
     }
