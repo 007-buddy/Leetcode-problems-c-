@@ -11,7 +11,7 @@ for(int i=0; i<n; i++)
 
 // 2. Hash Map (Optimal)
 // Store complements in unordered_map for 
-pair<int,int> twoSumBruteForce(const vector<int>& nums, int target) {
+pair<int,int> twosum_optimal(const vector<int>& nums, int target) {
 int n = nums.size();
 unordered_map<int,int> mp;
 for(int i=0; i<n; i++) {
@@ -25,7 +25,7 @@ for(int i=0; i<n; i++) {
 // 3. Two Pointers (Sorted)
 // Sort first, then left/right pointers converge.
 
-pair<int,int> twoSumBruteForce(const vector<int>& nums, int target) {
+pair<int,int> twoSum_sorted(const vector<int>& nums, int target) {
 sort(nums.begin(), nums.end());
 int n = nums.size();
 int l=0, r=n-1;
