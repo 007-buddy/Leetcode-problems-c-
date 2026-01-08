@@ -2,8 +2,8 @@
  to the end while maintaining the order of non-zero elements
  */
 
- // uses two loops first will move all the non-zero elements to the front and the last one will fill the rest of the array with zeroes
- // time complexity: O(n) and space complexity: O(1)
+// uses two loops first will move all the non-zero elements to the front and the last one will fill the rest of the array with zeroes
+// time complexity: O(n) and space complexity: O(1)
 #include <bits/stdc++.h>
 using namespace std;
 

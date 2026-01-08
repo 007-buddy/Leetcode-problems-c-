@@ -5,17 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-long countNumberOfSubarrays(vector<int> arr, int k) {
-    long long total=0;
-    long count=0;
-    unordered_map<int,int>subnum;
-    subnum[0]=1;
-    for(int i:arr){
-    total+=i;
-    if(subnum.find(total-k)!=subnum.end()){
-        count+=subnum[total-k];
+long countNumberOfSubarrays(vector<int> arr, int k)
+{
+    long long total = 0;
+    long count = 0;
+    unordered_map<int, int> subnum;
+    subnum[0] = 1;
+    for (int i : arr)
+    {
+        total += i;
+        if (subnum.find(total - k) != subnum.end())
+        {
+            count += subnum[total - k];
+        }
+        subnum[total]++;
     }
-    subnum[total]++;
-}
-return count;
+    return count;
 }

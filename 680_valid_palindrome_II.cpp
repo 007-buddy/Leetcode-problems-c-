@@ -5,27 +5,33 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-    bool val(string s, int left, int high) {
-        while (left < high) {
-            if (s[left] != s[high]) return false;
-            left++;
-            high--;
+bool val(string s, int left, int high)
+{
+    while (left < high)
+    {
+        if (s[left] != s[high])
+            return false;
+        left++;
+        high--;
+    }
+    return true;
+}
+
+bool validPalindrome(string s)
+{
+    int n = s.size();
+    int left = 0;
+    int high = n - 1;
+
+    while (left < high)
+    {
+        if (s[left] != s[high])
+        {
+            return val(s, left + 1, high) || val(s, left, high - 1);
         }
-        return true;
+        left++;
+        high--;
     }
 
-    bool validPalindrome(string s) {
-        int n = s.size();
-        int left = 0;
-        int high = n - 1;
-
-        while (left < high) {
-            if (s[left] != s[high]) {
-                return val(s, left + 1, high) || val(s, left, high - 1);
-            }
-            left++;
-            high--;
-        }
-
-        return true;
-    }
+    return true;
+}

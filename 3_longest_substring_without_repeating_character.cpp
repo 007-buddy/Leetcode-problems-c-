@@ -4,19 +4,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    int lengthOfLongestSubstring(string s) {
-        set<char>ch;
-     int len=0, l=0;
- for(int i=0;i<s.size();i++){
-    while(ch.find(s[i])!=ch.end()){
-            ch.erase(s[l]);
-            l++;
+    int lengthOfLongestSubstring(string s)
+    {
+        set<char> ch;
+        int len = 0, l = 0;
+        for (int i = 0; i < s.size(); i++)
+        {
+            while (ch.find(s[i]) != ch.end())
+            {
+                ch.erase(s[l]);
+                l++;
             }
-        ch.insert(s[i]);
-        len=max(len,i-l+1);
+            ch.insert(s[i]);
+            len = max(len, i - l + 1);
         }
-     return len;
+        return len;
     }
 };
